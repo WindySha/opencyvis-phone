@@ -1249,6 +1249,9 @@ class AgentService : Service() {
 
     fun getVirtualDisplayManager(): VirtualDisplayManager? = virtualDisplayManager
 
+    /** Active privilege backend, or null if none is connected. */
+    fun getBackend(): PrivilegeBackend? = backend
+
     fun isOverlayActiveState(state: AgentState?): Boolean {
         return OverlayStatePolicy.isActive(state, displayState)
     }
